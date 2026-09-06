@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gratia Prima Tex — Pabrik Hijab Print &amp; Sublimasi Langsung</title>
+<meta name="description" content="Gratia Prima Tex adalah pabrik hijab print dan sublimasi printing langsung di Indonesia. Custom motif, maklon private label, grosir hijab, dan jasa press dengan harga pabrik." />
+<meta name="theme-color" content="#2B2A28" />
+
+<!-- Open Graph sederhana -->
+<meta property="og:title" content="Gratia Prima Tex — Pabrik Hijab Print &amp; Sublimasi" />
+<meta property="og:description" content="Produksi hijab print &amp; sublimasi langsung dari pabrik. Custom motif, maklon, grosir, jasa press." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============ Token desain ============ */
+  :root{
+    --cream:#FBF7F0;
+    --ivory:#FFFDF9;
+    --sand:#F1E9DC;
+    --gold:#C8A25C;
+    --gold-deep:#A8823F;
+    --charcoal:#2B2A28;
+    --charcoal-soft:#4A4844;
+    --muted:#7A756D;
+    --line:#E7DECF;
+    --wa:#25D366;
+    --wa-dark:#1DA851;
+    --radius:16px;
+    --radius-sm:10px;
+    --shadow:0 10px 30px rgba(43,42,40,.08);
+    --shadow-lg:0 20px 50px rgba(43,42,40,.14);
+    --maxw:1140px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:84px}
+  body{
+    margin:0;
+    font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--charcoal);
+    background:var(--ivory);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  h1,h2,h3,.serif{font-family:"Playfair Display",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:0 0 .6rem}
+  h3{font-size:1.15rem;margin:0 0 .4rem}
+  p{margin:0 0 1rem}
+
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .section{padding:84px 0}
+  .section--tint{background:var(--cream);border-block:1px solid var(--line)}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--gold-deep);margin-bottom:.75rem
+  }
+  .lead{color:var(--charcoal-soft);font-size:1.05rem;max-width:62ch}
+  .center{text-align:center}
+  .center .lead{margin-inline:auto}
+
+  /* ============ Tombol ============ */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.85rem 1.5rem;border-radius:999px;font-weight:600;font-size:.95rem;
+    border:1px solid transparent;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn--gold{background:var(--gold);color:#fff;box-shadow:0 8px 20px rgba(200,162,92,.32)}
+  .btn--gold:hover{background:var(--gold-deep);box-shadow:0 12px 26px rgba(168,130,63,.38)}
+  .btn--ghost{background:transparent;color:var(--charcoal);border-color:var(--line)}
+  .btn--ghost:hover{border-color:var(--gold);color:var(--gold-deep)}
+  .btn--wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.3)}
+  .btn--wa:hover{background:var(--wa-dark)}
+  .btn--sm{padding:.6rem 1.1rem;font-size:.88rem}
+
+  /* ============ Header / Navigasi ============ */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,253,249,.88);backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+  .brand{display:flex;align-items:center;gap:.65rem}
+  .brand__mark{flex:0 0 auto}
+  .brand__text{display:flex;flex-direction:column;line-height:1.05}
+  .brand__name{font-family:"Playfair Display",serif;font-size:1.15rem;font-weight:700}
+  .brand__tag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+  .nav__links{display:flex;align-items:center;gap:1.6rem;list-style:none;margin:0;padding:0}
+  .nav__links a{font-size:.93rem;font-weight:500;color:var(--charcoal-soft);position:relative;padding:.25rem 0}
+  .nav__links a::after{
+    content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);
+    transition:width .22s ease
+  }
+  .nav__links a:hover{color:var(--charcoal)}
+  .nav__links a:hover::after{width:100%}
+
+  .nav__toggle{
+    display:none;background:none;border:1px solid var(--line);border-radius:10px;
+    padding:.5rem .6rem;cursor:pointer
+  }
+  .nav__toggle span{display:block;width:20px;height:2px;background:var(--charcoal);margin:4px 0;border-radius:2px}
+
+  /* ============ Hero ============ */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 420px at 15% -10%, rgba(200,162,92,.20), transparent 60%),
+      radial-gradient(700px 400px at 90% 10%, rgba(233,214,182,.45), transparent 62%),
+      linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+    padding:96px 0 84px;
+  }
+  .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.15rem,5vw,3.5rem);margin:0 0 1rem}
+  .hero h1 em{font-style:normal;color:var(--gold-deep)}
+  .hero__actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+  .hero__note{margin-top:1.4rem;font-size:.88rem;color:var(--muted)}
+
+  /* Kartu visual hero (murni CSS, tanpa gambar eksternal) */
+  .hero__card{
+    background:linear-gradient(150deg,#fff,var(--sand));
+    border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow-lg)
+  }
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+  .swatch{height:74px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+  .s1{background:linear-gradient(135deg,#D9C3A5,#B99C74)}
+  .s2{background:linear-gradient(135deg,#E9E3DA,#CFC5B6)}
+  .s3{background:linear-gradient(135deg,#8E9B90,#5F6E63)}
+  .s4{background:linear-gradient(135deg,#C8A25C,#A8823F)}
+  .s5{background:linear-gradient(135deg,#3E4750,#242A30)}
+  .s6{background:linear-gradient(135deg,#EFD9D3,#D6A9A0)}
+  .hero__card h3{margin-bottom:.2rem}
+  .hero__card p{font-size:.9rem;color:var(--muted);margin:0}
+  .spec{display:flex;justify-content:space-between;gap:1rem;border-top:1px dashed var(--line);padding:.6rem 0;font-size:.88rem}
+  .spec span:last-child{font-weight:600}
+
+  /* ============ Statistik ============ */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+  .stat{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;text-align:center;box-shadow:var(--shadow);transition:transform .2s ease
+  }
+  .stat:hover{transform:translateY(-4px)}
+  .stat__num{font-family:"Playfair Display",serif;font-size:1.9rem;font-weight:700;color:var(--gold-deep);line-height:1.1}
+  .stat__label{font-size:.85rem;color:var(--muted);margin-top:.25rem}
+
+  /* ============ Tentang ============ */
+  .about__grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .checklist{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.9rem}
+  .checklist li{display:flex;gap:.7rem;align-items:flex-start;font-size:.98rem;color:var(--charcoal-soft)}
+  .tick{
+    flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--sand);
+    color:var(--gold-deep);display:grid;place-items:center;font-size:.72rem;font-weight:700;margin-top:.2rem
+  }
+  .quote-box{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)
+  }
+  .quote-box p:last-child{margin:0}
+
+  /* ============ Produk / Layanan ============ */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow);
+    transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+  .card__icon{
+    width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--sand),#fff);border:1px solid var(--line);margin-bottom:16px
+  }
+  .card p{font-size:.95rem;color:var(--charcoal-soft);margin-bottom:.8rem}
+  .tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
+  .tags li{
+    font-size:.75rem;font-weight:600;color:var(--gold-deep);
+    background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:.22rem .7rem
+  }
+
+  /* ============ Keunggulan ============ */
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .feature{padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s ease,transform .2s ease}
+  .feature:hover{border-color:var(--gold);transform:translateY(-4px)}
+  .feature__no{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--gold);font-weight:700}
+  .feature p{font-size:.93rem;color:var(--charcoal-soft);margin:0}
+
+  /* ============ Testimoni ============ */
+  .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .testi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .testi__stars{color:var(--gold);letter-spacing:2px;font-size:.9rem}
+  .testi p{font-size:.95rem;color:var(--charcoal-soft);margin:.6rem 0 1.1rem}
+  .testi__who{display:flex;align-items:center;gap:.7rem}
+  .avatar{
+    width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--sand),var(--gold));
+    color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem
+  }
+  .testi__who strong{display:block;font-size:.9rem}
+  .testi__who span{font-size:.8rem;color:var(--muted)}
+
+  /* ============ Kontak ============ */
+  .contact{
+    background:linear-gradient(160deg,var(--charcoal) 0%,#1F1E1C 100%);
+    color:#F5F0E8;
+  }
+  .contact h2{color:#fff}
+  .contact .lead{color:#CFC7B9}
+  .contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-top:36px}
+  .contact-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+  .contact-list li{display:flex;gap:.9rem;align-items:flex-start}
+  .contact-list .ico{
+    flex:0 0 auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+    background:rgba(200,162,92,.16);border:1px solid rgba(200,162,92,.35)
+  }
+  .contact-list strong{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .contact-list a,.contact-list span.val{color:#F5F0E8;font-size:1rem}
+  .contact-list a:hover{color:var(--gold)}
+  .contact__cta{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius);padding:30px
+  }
+  .contact__cta h3{color:#fff}
+  .contact__cta p{color:#CFC7B9;font-size:.95rem}
+  .contact__cta .btn{width:100%;justify-content:center;margin-top:.5rem}
+
+  /* ============ Footer ============ */
+  .site-footer{background:#1A1917;color:#9A938A;padding:30px 0;font-size:.87rem}
+  .site-footer .container{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+  .site-footer a:hover{color:var(--gold)}
+
+  /* ============ Tombol WA mengambang ============ */
+  .wa-float{
+    position:fixed;right:18px;bottom:18px;z-index:80;
+    width:56px;height:56px;border-radius:50%;background:var(--wa);
+    display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.42);
+    transition:transform .2s ease
+  }
+  .wa-float:hover{transform:scale(1.08)}
+
+  /* ============ Responsif ============ */
+  @media (max-width:960px){
+    .hero__grid,.about__grid,.contact__grid{grid-template-columns:1fr;gap:36px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .features,.testimonials{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+  }
+  @media (max-width:768px){
+    .section{padding:60px 0}
+    .hero{padding:64px 0 56px}
+    .nav__toggle{display:block}
+    .nav__links{
+      position:absolute;left:0;right:0;top:100%;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:var(--ivory);border-bottom:1px solid var(--line);
+      padding:.5rem 22px 1rem;display:none;box-shadow:var(--shadow)
+    }
+    .nav__links.is-open{display:flex}
+    .nav__links li{border-bottom:1px solid var(--line)}
+    .nav__links li:last-child{border-bottom:none}
+    .nav__links a{display:block;padding:.85rem 0}
+    .nav .btn--wa{display:none}
+    .site-header .container{position:relative}
+  }
+  @media (max-width:420px){
+    .stats{grid-template-columns:1fr}
+    .hero__actions .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ===================== HEADER / NAVIGASI ===================== -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Gratia Prima Tex — beranda">
+        <!-- Logo SVG inline sederhana: monogram GP -->
+        <svg class="brand__mark" width="40" height="40" viewBox="0 0 40 40" role="img" aria-label="Logo Gratia Prima Tex">
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="#2B2A28"/>
+          <path d="M8 28c4-10 8-16 12-16s6 4 4 9" stroke="#C8A25C" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <text x="20" y="25" text-anchor="middle" font-family="Playfair Display, serif" font-size="14" font-weight="700" fill="#FBF7F0">G</text>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">Gratia Prima Tex</span>
+          <span class="brand__tag">Hijab &amp; Sublimasi</span>
+        </span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#keunggulan">Keunggulan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+
+      <a class="btn btn--wa btn--sm" href="https://wa.me/6281297575570?text=Halo%20Gratia%20Prima%20Tex%2C%20saya%20ingin%20tanya%20produksi%20hijab%20sublim." target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14c-.3.8-1.6 1.5-2.2 1.5-.6.1-1.3.1-2.1-.1a12 12 0 0 1-6.6-5.8c-.5-.9-.8-1.9-.8-2.8 0-1 .5-1.9 1.2-2.3.3-.2.7-.2 1 0l.9 1.7c.1.3.1.6-.1.8l-.5.6c-.2.2-.2.4-.1.6a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.7-.8c.2-.2.5-.3.8-.2l1.7.8c.3.2.4.5.3.8Z"/></svg>
+        WhatsApp
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="beranda">
+  <div class="container">
+    <div class="hero__grid">
+      <div>
+        <span class="eyebrow">Pabrik Langsung &middot; Bandung, Indonesia</span>
+        <h1>Pabrik Hijab <em>Print &amp; Sublimasi</em> — Langsung dari Mesin Kami</h1>
+        <p class="lead">
+          Kami memproduksi hijab printing dan kain sublimasi sendiri: dari file desain,
+          cetak transfer, press, sampai finishing. Kapasitas besar, kualitas konsisten,
+          dan harga pabrik tanpa perantara.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--gold" href="https://wa.me/6281297575570?text=Halo%20Gratia%20Prima%20Tex%2C%20saya%20mau%20minta%20penawaran%20harga." target="_blank" rel="noopener">Minta Penawaran</a>
+          <a class="btn btn--ghost" href="#produk">Lihat Produk</a>
+        </div>
+
+        <p class="hero__note">Melayani brand hijab, reseller, konveksi, dan order rutin partai besar.</p>
+      </div>
+
+      <!-- Kartu visual: contoh spesifikasi produksi -->
+      <aside class="hero__card" aria-label="Ringkasan kemampuan produksi">
+        <div class="swatches" aria-hidden="true">
+          <div class="swatch s1"></div><div class="swatch s2"></div><div class="swatch s3"></div>
+          <div class="swatch s4"></div><div class="swatch s5"></div><div class="swatch s6"></div>
+        </div>
+        <h3>Spesifikasi Produksi</h3>
+        <p>Standar kerja harian di workshop kami.</p>
+        <div class="spec"><span>Mesin print sublim</span><span>2 unit</span></div>
+        <div class="spec"><span>Mesin press</span><span>4 unit</span></div>
+        <div class="spec"><span>Jenis bahan</span><span>Voal, Ceruty, Satin, Polyester</span></div>
+        <div class="spec"><span>Motif</span><span>Custom / desain sendiri</span></div>
+        <div class="spec"><span>Layanan</span><span>Sublim, maklon, grosir, press</span></div>
+      </aside>
+    </div>
+
+    <!-- Statistik ringkas -->
+    <div class="stats">
+      <div class="stat"><div class="stat__num">100rb+</div><div class="stat__label">Panel per bulan (kapasitas)</div></div>
+      <div class="stat"><div class="stat__num">2</div><div class="stat__label">Mesin print sublimasi</div></div>
+      <div class="stat"><div class="stat__num">4</div><div class="stat__label">Mesin press produksi</div></div>
+      <div class="stat"><div class="stat__num">6 hari</div><div class="stat__label">Operasional per minggu</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TENTANG ===================== -->
+<section class="section" id="tentang">
+  <div class="container">
+    <div class="about__grid">
+      <div>
+        <span class="eyebrow">Tentang Kami</span>
+        <h2>Bukan Perantara — Kami Pemilik Mesinnya</h2>
+        <p class="lead">
+          Gratia Prima Tex adalah unit produksi hijab print dan sublimasi printing yang
+          berjalan setiap hari dengan mesin sendiri. Karena seluruh proses ada di dalam
+          satu atap, kami bisa mengontrol warna, ketajaman motif, dan jadwal kirim
+          tanpa bergantung pada pihak ketiga.
+        </p>
+        <ul class="checklist">
+          <li><span class="tick">&#10003;</span><span>Produksi in-house: print transfer, press, potong, finishing.</span></li>
+          <li><span class="tick">&#10003;</span><span>Pengalaman menangani hijab custom motif dan kain sublim untuk brand.</span></li>
+          <li><span class="tick">&#10003;</span><span>Kapasitas ratusan ribu panel per bulan untuk order rutin.</span></li>
+          <li><span class="tick">&#10003;</span><span>Harga pabrik — tanpa markup distributor.</span></li>
+        </ul>
+      </div>
+
+      <div class="quote-box">
+        <span class="eyebrow">Cara Kerja</span>
+        <h3>Empat langkah, satu atap</h3>
+        <p><strong>1. Konsultasi &amp; penawaran.</strong> Kirim kebutuhan Anda lewat WhatsApp: jenis bahan, jumlah, dan motif.</p>
+        <p><strong>2. Desain &amp; sample.</strong> Kami siapkan layout motif dan contoh warna sebelum produksi massal.</p>
+        <p><strong>3. Produksi.</strong> Print sublim dan press dijalankan sesuai jadwal yang disepakati.</p>
+        <p><strong>4. QC &amp; kirim.</strong> Pemeriksaan hasil press, lalu pengiriman ke alamat Anda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUK / LAYANAN ===================== -->
+<section class="section section--tint" id="produk">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Produk &amp; Layanan</span>
+      <h2>Empat Layanan Utama</h2>
+      <p class="lead">Dari satu motif custom sampai produksi rutin skala brand.</p>
+    </div>
+
+    <div class="cards">
+      <!-- Layanan 1 -->
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8823F" stroke-width="1.8" stroke-linecap="round"><path d="M4 20 20 4"/><path d="M4 12h6M14 20h6M4 4h4M16 4h4v4"/></svg>
+        </div>
+        <h3>Print Sublim Hijab Custom Motif</h3>
+        <p>
+          Cetak motif Anda sendiri di atas bahan voal, ceruty, satin, dan polyester.
+          Warna tajam, hasil menyatu dengan serat kain, tidak mudah retak atau mengelupas.
+        </p>
+        <ul class="tags"><li>Custom desain</li><li>Full color</li><li>Panel per lembar</li></ul>
+      </article>
+
+      <!-- Layanan 2 -->
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8823F" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l8 4v6c0 4-3.4 7-8 8-4.6-1-8-4-8-8V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Maklon &amp; Private Label</h3>
+        <p>
+          Produksi untuk brand Anda: kami kerjakan, label dan identitas tetap milik Anda.
+          Cocok untuk brand hijab yang ingin skala produksi stabil tanpa investasi mesin.
+        </p>
+        <ul class="tags"><li>Label brand sendiri</li><li>Order rutin</li><li>Rahasia desain terjaga</li></ul>
+      </article>
+
+      <!-- Layanan 3 -->
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8823F" stroke-width="1.8" stroke-linecap="round"><path d="M3 7h18l-1.5 12.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 7Z"/><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/></svg>
+        </div>
+        <h3>Grosir Hijab (Ecer &amp; Partai)</h3>
+        <p>
+          Stok hijab printing siap kirim untuk reseller dan toko. Bisa ambil eceran untuk
+          uji pasar, lanjut partai besar saat penjualan naik.
+        </p>
+        <ul class="tags"><li>Harga bertingkat</li><li>Reseller welcome</li><li>Restock cepat</li></ul>
+      </article>
+
+      <!-- Layanan 4 -->
+      <article class="card">
+        <div class="card__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8823F" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h16v6H4z"/><path d="M7 11v8M17 11v8M4 19h16"/></svg>
+        </div>
+        <h3>Jasa Press</h3>
+        <p>
+          Punya kertas transfer sendiri? Kami sediakan jasa press dengan 4 unit mesin,
+          suhu dan tekanan terkontrol agar hasil rata dan warna stabil.
+        </p>
+        <ul class="tags"><li>4 mesin press</li><li>Volume besar</li><li>Hasil rata</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KEUNGGULAN ===================== -->
+<section class="section" id="keunggulan">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Keunggulan</span>
+      <h2>Kenapa Memilih Gratia Prima Tex</h2>
+      <p class="lead">Alasan yang sama yang membuat pelanggan kami kembali order tiap bulan.</p>
+    </div>
+
+    <div class="features">
+      <div class="feature"><div class="feature__no">01</div><h3>Harga Pabrik</h3><p>Anda beli langsung dari yang memproduksi, bukan lewat lapis distributor.</p></div>
+      <div class="feature"><div class="feature__no">02</div><h3>Kapasitas Besar</h3><p>Ratusan ribu panel per bulan, sanggup menampung lonjakan order musiman.</p></div>
+      <div class="feature"><div class="feature__no">03</div><h3>Kualitas Stabil</h3><p>Setting suhu dan profil warna dijaga konsisten, hasil batch ke batch seragam.</p></div>
+      <div class="feature"><div class="feature__no">04</div><h3>Custom Motif Bebas</h3><p>Kirim file desain Anda, kami sesuaikan layout panel dan ukuran hijabnya.</p></div>
+      <div class="feature"><div class="feature__no">05</div><h3>Support Order Rutin</h3><p>Jadwal produksi berkala untuk brand dengan kebutuhan restock tetap.</p></div>
+      <div class="feature"><div class="feature__no">06</div><h3>Komunikasi Cepat</h3><p>Satu nomor WhatsApp untuk penawaran, revisi desain, sampai update pengiriman.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONI ===================== -->
+<section class="section section--tint" id="testimoni">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Testimoni</span>
+      <h2>Kata Mitra Kami</h2>
+      <p class="lead">Beberapa catatan dari pelanggan brand dan reseller.</p>
+    </div>
+
+    <div class="testimonials">
+      <figure class="testi">
+        <div class="testi__stars" aria-label="Lima dari lima">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>&ldquo;Warna motifnya keluar persis seperti file desain kami. Restock bulanan jadi jauh lebih gampang.&rdquo;</p></blockquote>
+        <figcaption class="testi__who">
+          <span class="avatar" aria-hidden="true">NA</span>
+          <span><strong>Nadia A.</strong><span>Owner brand hijab</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="testi__stars" aria-label="Lima dari lima">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>&ldquo;Awal coba ecer dulu buat tes pasar, sekarang tiap bulan ambil partai. Harganya masuk untuk reseller.&rdquo;</p></blockquote>
+        <figcaption class="testi__who">
+          <span class="avatar" aria-hidden="true">RS</span>
+          <span><strong>Rian S.</strong><span>Reseller online</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="testi">
+        <div class="testi__stars" aria-label="Lima dari lima">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>&ldquo;Jasa pressnya rapi dan tepat waktu. Untuk volume besar, ini yang paling kami butuhkan.&rdquo;</p></blockquote>
+        <figcaption class="testi__who">
+          <span class="avatar" aria-hidden="true">DP</span>
+          <span><strong>Dewi P.</strong><span>Konveksi mitra</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KONTAK ===================== -->
+<section class="section contact" id="kontak">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Kontak</span>
+      <h2>Mari Bicara Produksi Anda</h2>
+      <p class="lead">Kirim detail kebutuhan — bahan, jumlah, dan motif — kami balas dengan penawaran.</p>
+    </div>
+
+    <div class="contact__grid">
+      <ul class="contact-list">
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="#C8A25C"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14c-.3.8-1.6 1.5-2.2 1.5-.6.1-1.3.1-2.1-.1a12 12 0 0 1-6.6-5.8c-.5-.9-.8-1.9-.8-2.8 0-1 .5-1.9 1.2-2.3.3-.2.7-.2 1 0l.9 1.7c.1.3.1.6-.1.8l-.5.6c-.2.2-.2.4-.1.6a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.7-.8c.2-.2.5-.3.8-.2l1.7.8c.3.2.4.5.3.8Z"/></svg></span>
+          <span><strong>WhatsApp</strong><a href="https://wa.me/6281297575570" target="_blank" rel="noopener">+62 812-9757-5570</a></span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A25C" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span><strong>Email</strong><a href="mailto:info@gratiaprimatex.com">info@gratiaprimatex.com</a></span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A25C" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#C8A25C"/></svg></span>
+          <span><strong>Instagram</strong><a href="https://instagram.com/gratiaprimatex" target="_blank" rel="noopener">@gratiaprimatex</a></span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A25C" stroke-width="1.8"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><strong>Workshop</strong><span class="val">Bandung, Jawa Barat, Indonesia</span></span>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A25C" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><strong>Jam Operasional</strong><span class="val">Senin&ndash;Sabtu, 08.00&ndash;17.00 WIB</span></span>
+        </li>
+      </ul>
+
+      <div class="contact__cta">
+        <h3>Minta Penawaran Sekarang</h3>
+        <p>
+          Untuk mempercepat penawaran, sebutkan: jenis bahan, ukuran/jumlah panel,
+          jumlah warna atau motif, dan target waktu kirim.
+        </p>
+        <a class="btn btn--wa" href="https://wa.me/6281297575570?text=Halo%20Gratia%20Prima%20Tex.%0ABahan%3A%20%0AJumlah%3A%20%0AMotif%3A%20%0ATarget%20kirim%3A%20" target="_blank" rel="noopener">Chat via WhatsApp</a>
+        <a class="btn btn--ghost" style="width:100%;justify-content:center;margin-top:.6rem;color:#F5F0E8;border-color:rgba(255,255,255,.25)" href="mailto:info@gratiaprimatex.com">Kirim Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Gratia Prima Tex. Seluruh hak cipta dilindungi.</span>
+    <span>Pabrik Hijab Print &amp; Sublimasi &middot; <a href="https://wa.me/6281297575570" target="_blank" rel="noopener">+62 812-9757-5570</a></span>
+  </div>
+</footer>
+
+<!-- Tombol WhatsApp mengambang -->
+<a class="wa-float" href="https://wa.me/6281297575570" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14c-.3.8-1.6 1.5-2.2 1.5-.6.1-1.3.1-2.1-.1a12 12 0 0 1-6.6-5.8c-.5-.9-.8-1.9-.8-2.8 0-1 .5-1.9 1.2-2.3.3-.2.7-.2 1 0l.9 1.7c.1.3.1.6-.1.8l-.5.6c-.2.2-.2.4-.1.6a8 8 0 0 0 3.6 3.2c.3.1.5.1.7-.1l.7-.8c.2-.2.5-.3.8-.2l1.7.8c.3.2.4.5.3.8Z"/></svg>
+</a>
+
+<script>
+  // Menu mobile: buka/tutup + tutup otomatis setelah memilih tautan
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links  = document.getElementById('navLinks');
+    if (!toggle || !links) return;
+
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+    });
+
+    links.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
